@@ -1,10 +1,14 @@
 {
 	"name": "secdn",
-	"version": "1.0.0",
-	"description": "Secure CDN: A tiny 1.5kb library to validate CDN resources against a known SHA-256 hash before allowing them to run on your SSL-protected web application."
+	"version": "1.0.1",
+	"description": "Protect your SSL web app with SHA-256 validation of CDN javascript libraries",
 	"dependencies": {
 		"tiny-sha256": "1.0.2"
 	},
 	"license": "MIT",
-	"main": "index.js"
+	"main": "index.js",
+	"repository" : {
+		"type": "git",
+		"url": "http://github.com/tristanhoy/secdn"
+	}
 }
