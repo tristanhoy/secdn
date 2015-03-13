@@ -1,0 +1,10 @@
+{
+	"name": "secdn",
+	"version": "1.0.0",
+	"description": "Secure CDN: A tiny 1.5kb library to validate CDN resources against a known SHA-256 hash before allowing them to run on your SSL-protected web application."
+	"dependencies": {
+		"tiny-sha256": "1.0.2"
+	},
+	"license": "MIT",
+	"main": "index.js"
+}
