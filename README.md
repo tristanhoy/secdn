@@ -37,7 +37,7 @@ secdn.sign('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js',
  exception if it has been tampered with
 */
 secdn.retrieve('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js', 
-	'9b2392e14dc260ace86b78b2009939d5d64718f42a6dd1f65e13079b9d20f106', 
+	'74474faf45300360dabfa130cf788d6bc17b91bb51c44d608c92761ca8c9bfe7', 
 	function(content) {
 		//do something with this resource
 	});
@@ -47,7 +47,7 @@ secdn.retrieve('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js',
  the document head
 */
 secdn.include('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js', 
-	'9b2392e14dc260ace86b78b2009939d5d64718f42a6dd1f65e13079b9d20f106',
+	'74474faf45300360dabfa130cf788d6bc17b91bb51c44d608c92761ca8c9bfe7',
 	function() { 
 		//code to run when script is loaded
 	});
@@ -57,7 +57,7 @@ secdn.include('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js',
  HTML with the supplied content
 */
 secdn.page('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js', 
-	'9b2392e14dc260ace86b78b2009939d5d64718f42a6dd1f65e13079b9d20f106',
+	'74474faf45300360dabfa130cf788d6bc17b91bb51c44d608c92761ca8c9bfe7',
 	function() { 
 		//code to run when content is loaded
 	});

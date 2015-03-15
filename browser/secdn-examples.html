@@ -13,16 +13,16 @@
 			});
 		},
 		
-		retreive: function() {
+		retrieve: function() {
 			//Download a resource from any **untrusted** CORS-enabled CDN - will throw an exception if it has been tampered with
 			secdn.retrieve('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js', 
-				'9b2392e14dc260ace86b78b2009939d5d64718f42a6dd1f65e13079b9d20f106', 
+				'74474faf45300360dabfa130cf788d6bc17b91bb51c44d608c92761ca8c9bfe7', 
 				function(content) {
 					//do something with this resource
 				});
 		},
 		
-		retreiveInvalid: function() {
+		retrieveInvalid: function() {
 			//Example validation exception
 			secdn.retrieve('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.js', 
 				'9b2392e14dc260ace86b78b2009939d5d64718f42a6dd1f65e13079b9d20f106', 
@@ -34,7 +34,7 @@
 		include: function() {
 			//A wrapper for secdn.retrieve that will include the content as a script in the document head.
 			secdn.include('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js', 
-				'9b2392e14dc260ace86b78b2009939d5d64718f42a6dd1f65e13079b9d20f106',
+				'74474faf45300360dabfa130cf788d6bc17b91bb51c44d608c92761ca8c9bfe7',
 				function() { 
 					//code to run when script is loaded
 				});
@@ -43,7 +43,7 @@
 		page: function() {
 			//A wrapper for secdn.retrieve that will replace the current page's entire HTML with the supplied content.
 			secdn.page('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js', 
-				'9b2392e14dc260ace86b78b2009939d5d64718f42a6dd1f65e13079b9d20f106',
+				'74474faf45300360dabfa130cf788d6bc17b91bb51c44d608c92761ca8c9bfe7',
 				function() { 
 					//code to run when content is loaded
 				});

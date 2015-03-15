@@ -1,6 +1,6 @@
 {
 	"name": "secdn",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Protect your SSL web app with SHA-256 validation of CDN javascript libraries",
 	"dependencies": {
 		"tiny-sha256": "1.0.2"
