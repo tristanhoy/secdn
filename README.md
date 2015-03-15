@@ -1,14 +1,12 @@
-﻿## SSL, CDNs and Javascript
+﻿## SSL + CDN + Javascript
 
 SSL is a contract to your users that the information they provide you will not be accessible to anyone else.
 
 If you are including active content (javascript libraries, html fragments), simply prepending "https://" to make the security errors go away still breaks that contract - as the CDN is now able to inject any code of its choosing onto your webpage.
 
-Now I know that using a CDN boosts the performance of your website. And I'm sure you "trust" the big name CDNs out there, but security breaches happen at companies of all sizes.
+If you still want the performance benefits of CDN, this **1.5kb tool** will close the security gap by using CORS to retrieve resources from supporting CDNs (e.g. cdnjs.com) and **validating the contents of any resource against a known sha256 hash** before allowing it to execute on the page.
 
-To take the "trust" out of the equation, this very lightweight tool will use CORS to retrieve a resource from supporting CDNs (e.g. cdnjs.com) and validate the contents of that resource against a known sha256 hash.
-
-Thanks to Ryan Grove for the inspiration (http://wonko.com/post/javascript-ssl-cdn)
+Thanks to __[Ryan Grove](http://wonko.com/post/javascript-ssl-cdn)__ for the inspiration
 
 ## Installation
 
@@ -18,7 +16,7 @@ npm install secdn
 
 ## Examples
 
-```javascript
+```js
 /*
  Compute the sha256 hash of any string (after using escape() as tiny-sha256 
  only supports ASCII)
