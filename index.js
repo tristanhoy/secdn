@@ -1,6 +1,6 @@
 var sha256 = require('tiny-sha256');
 
-var hash = function(text) { 
+var getHash = function(text) { 
 	return sha256(escape(text)); 
 }
 
@@ -15,17 +15,17 @@ var ajax = function(url, callback) {
 
 var secdn = {};
 
-secdn['hash'] = hash;
+secdn['hash'] = getHash;
 
 secdn['sign'] = function(url, callback) {
 	ajax(url, function(responseText) {
-		callback(hash(responseText));
+		callback(getHash(responseText));
 	});
 };
 
 var retrieve = function(url, hash, callback) {
 	ajax(url, function(responseText) {
-		if (hash(responseText) == hash)
+		if (getHash(responseText) == hash)
 			callback(responseText);
 		else
 			throw 'sha256 validation for ' + url + ' failed';
@@ -38,7 +38,7 @@ secdn['include'] = function(url, hash, callback) {
 	retrieve(url, hash, function(content) {
 		var elem = document.createElement('script');
 		elem.innerHTML = content;
-		document.head.appendChild(elem);
+		document.getElementsByTagName('head')[0].appendChild(elem);
 		callback(elem);
 	});
 }

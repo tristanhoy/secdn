@@ -44,7 +44,7 @@ secdn['include'] = function(url, hash, callback) {
 	retrieve(url, hash, function(content) {
 		var elem = document.createElement('script');
 		elem.innerHTML = content;
-		document.head.appendChild(elem);
+		document.getElementsByTagName('head')[0].appendChild(elem);
 		callback(elem);
 	});
 }
