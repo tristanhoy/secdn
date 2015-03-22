@@ -37,7 +37,7 @@ secdn['retrieve'] = retrieve;
 secdn['include'] = function(url, hash, callback) {
 	retrieve(url, hash, function(content) {
 		var elem = document.createElement('script');
-		elem.innerHTML = content;
+		elem.text = content;
 		document.getElementsByTagName('head')[0].appendChild(elem);
 		callback(elem);
 	});
