@@ -1,15 +1,21 @@
 {
-	"name": "secdn",
-	"version": "1.0.3",
-	"description": "Protect your SSL web app with SHA-256 validation of CDN javascript libraries",
-	"dependencies": {
-		"tiny-sha256": "1.0.2"
-	},
-	"license": "MIT",
-	"main": "index.js",
-	"repository" : {
-		"type": "git",
-		"url": "http://github.com/tristanhoy/secdn"
-	},
-	"keywords": [ "cdn", "sha", "sha256", "hash", "cors" ]
+  "name": "secdn",
+  "version": "2.0.0",
+  "description": "Protect your SSL web app with SHA-256 validation of CDN javascript libraries",
+  "dependencies": {
+    "tiny-sha256": "1.0.2"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tristanhoy/secdn"
+  },
+  "keywords": [
+    "cdn",
+    "sha",
+    "sha256",
+    "hash",
+    "cors"
+  ]
 }

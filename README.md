@@ -1,4 +1,4 @@
-﻿## SSL + CDN + Javascript
+## SSL + CDN + Javascript
 
 SSL is a contract to your users that the information they provide you will not be accessible to anyone else.
 
@@ -28,9 +28,10 @@ console.log(secdn.hash('var myFavouriteUnicodeChar = "ǂ"'));
  the hash signature that will be used later to verify it
 */
 secdn.sign('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js', 
-	function(hash) {
+	function(err, hash) {
 		console.log(hash);
-	});
+	}
+);
 	
 /*
  Download a resource from any **untrusted** CORS-enabled CDN - will throw an 
@@ -38,9 +39,14 @@ secdn.sign('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js',
 */
 secdn.retrieve('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js', 
 	'74474faf45300360dabfa130cf788d6bc17b91bb51c44d608c92761ca8c9bfe7', 
-	function(content) {
-		//do something with this resource
-	});
+	function(err, content) {
+		if (err) {
+			//handle err
+		} else {
+			//do something with this resource
+		}
+	}
+);
 
 /*
  A wrapper for secdn.retrieve that will include the content as a script in 
@@ -48,9 +54,14 @@ secdn.retrieve('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js',
 */
 secdn.include('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js', 
 	'74474faf45300360dabfa130cf788d6bc17b91bb51c44d608c92761ca8c9bfe7',
-	function() { 
-		//code to run when script is loaded
-	});
+	function(err) { 
+		if (err) {
+			//handle err
+		} else {
+			//code to run when script is loaded
+		}
+	}
+);
 	
 /*
  A wrapper for secdn.retrieve that will replace the current page's entire 
@@ -58,9 +69,14 @@ secdn.include('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js',
 */
 secdn.page('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js', 
 	'74474faf45300360dabfa130cf788d6bc17b91bb51c44d608c92761ca8c9bfe7',
-	function() { 
-		//code to run when content is loaded
-	});
+	function(err) { 
+		if (err) {
+			//handle err
+		} else {
+			//code to run when script is loaded
+		}
+	}
+);
 ```
 
 ## License
