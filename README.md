@@ -73,7 +73,7 @@ secdn.page('http://cdnjs.cloudflare.com/ajax/libs/6px/1.0.3/6px.min.js',
 		if (err) {
 			//handle err
 		} else {
-			//code to run when script is loaded
+			//code to run when content is loaded
 		}
 	}
 );
